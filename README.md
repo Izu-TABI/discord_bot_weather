@@ -1,9 +1,8 @@
 # discord_bot_weather
-### ご覧いただきありがとうございます。
-
-botを使用する際は、<br>
+<br>
+botを使用する際は、<br>Cancel changes
 `npm install discord.js`
-をターミナルで実行して、discord.jsをダウンロードしてください。<br><br>
+をターミナルで実行して、discord.jsをインストールしてください。<br><br>
 
 
 また、index.js内を少し書き換えていただく必要があります。<br><br>
