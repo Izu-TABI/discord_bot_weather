@@ -1,14 +1,8 @@
 const Discord = require('discord.js')
 const fetch = require('node-fetch');
-
 global.fetch = require("node-fetch");
-
 const { Client, Intents, } = require('discord.js');
-
 const client = new Client ({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_VOICE_STATES,"GUILDS", "GUILD_MESSAGES", "DIRECT_MESSAGES"] });
-
-
-
 
 client.once('ready', () => {
     console.log('Ready!');
@@ -49,12 +43,11 @@ client.on("messageCreate", message => {
           return response.json()
       })
       .then(data => {
-      console.log(data);
-      console.log(data.list[0].weather[0].description);
       let weather = data.list[0].weather[0].description;
       let city = data.city.name;
+          
       message.channel.send('天気予報を取得します...');
-      console.log(data.list[1].weather[0]);
+          
       const embed = new Discord.MessageEmbed()
       .setTitle('今日、明日の天気')
       .setURL('https://google.com')
@@ -90,7 +83,5 @@ client.on("messageCreate", message => {
     }
     
 })
-
-
 
 client.login('yourBotToken');
